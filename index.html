@@ -39,7 +39,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	//YOUR JAVASCRIPT GOES HERE
+	var heartburn_count = 0;
+        var indigestion_count = 0;
+
+
+        function heartburnAdd(){
+            heartburn_count = heartburn_count + 1;
+		alert(heartburn_count);
+        };
+        function indigestionAdd(){
+            indigestion_count = indigestion_count + 1;
+		alert(indigestion_count);
+        };
+	//function to compute final percentages
+	function getResults(){
+		var heartburnPercent = (heartburn_count / 4) *100; //calculate percent chance of heartburn count by using heartburn count and dividing by the number of questions times 100
+		var indigestionPercent = (indigestion_count / 4)* 100; //calculate percent chance of indigestion by using indigestion count and dividing by the number of questions times 100
+	        var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is Heartburn =" + heartburnPercent + "<br> Probability it is Indigestion =" + indigestionPercent;//result text for final percentages 
+	}
 
 </script>	
 
