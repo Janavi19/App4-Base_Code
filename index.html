@@ -85,10 +85,91 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 </style>
 
-<body>
+<body> <!--html pages for the program as follows--> 
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Heartburn or indigestion?</h1>
+</div>
 	
-	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
+<div id="content" class="w3-container">
+	<p>Are you feeling like you might have a indigestion but wonder if it is heartburn. Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+</div>
+<!--Question 1 content here--> 
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1> <!--Between <h1></h1>, Header title is included-->
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Are you experiencing pain in the upper abdomen?</p> <!--Question 1 addressed to the user-->
+	<a href="#two" onclick="heartburnAdd();" class="w3-btn w3-grey w3-round"> No </a>
+	<!--If the user selects the No button for this question, their symptom is not confirmed Heartburn--> 
+	<a href="#two" onclick="indigestionAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<!--If the user selects the Yes button for this question, their symptom is confirmed Indigestion--> 
+    	</div>
+</div>
+<!--Question 2 content here--> 
+<div class="page" id="two">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1> <!--Between <h1></h1>, Header title is included--> 
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Are you experiencing difficulty in swallowing?</p> <!--Question addressed to the user--> 
+	<a href="#three" onclick="heartburnAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<!--If the user selects the Yes button for this question, their symptom is confirmed Heartburn--> 
+	<a href="#three" onclick="indigestionAdd();" class="w3-btn w3-grey w3-round"> No </a>
+	<!--If the user selects the No button for this question, their symptom is not confirmed Indigestion--> 
+    	</div>
+</div>
+<!--Question 3 content here--> 	
+<div class="page" id="three">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1> <!--Between <h1></h1>, Header title is included--> 
+	</div>
+	
+	<div id="content" class="w3-container">
+        <p>Are you experiencing nausea?</p> <!--Question addressed to the user--> 
+	<a href="#four" onclick="heartburnAdd();" class="w3-btn w3-grey w3-round"> No </a>
+	<!--If the user selects the No button for this question, their symptom is not confirmed Heartburn--> 
+	<a href="#four" onclick="indigestionAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<!--If the user selects the Yes button for this question, their symptom is confirmed Indigestion--> 
+    	</div>
+</div>
+<!--Question 4 content here--> 	
+<div class="page" id="four">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+		<!--Between <h1></h1>, Header title is included--> 
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Are your experiencing a persistent sore throat?</p>  <!--Question addressed to the user-->
+	<a href="#five" onclick="heartburnAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<!--If the user selects the Yes button for this question, their symptom is confirmed Heartburn--> 
+	<a href="#five" onclick="indigestionAdd();" class="w3-btn w3-grey w3-round"> No </a>
+	<!--If the user selects the No button for this question, their symptom is not confirmed Indigestion--> 
+    	</div>
+</div>	
+<!--final page displaying results--> 
+<div class="page" id="results">
+	<div header="w3 container w3-flat-carrot">
+		<h1>Results</h1>
+	</div> 
+	
+	<div id="content" class="w3-container"> 
+		<button onclick="getResults();">Results</button> 
+	<!--button pressed to generate results for percentages--> 
+		<p id="results"></p>
+	</div>
+
+</div>
+
 	
 </body>
 </html>
